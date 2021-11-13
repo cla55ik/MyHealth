@@ -1,3 +1,4 @@
 .vscode
 robots.txt
-config*
+*config*
+test*

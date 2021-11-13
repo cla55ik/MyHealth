@@ -5,11 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>My Health</title>
 </head>
 
 <body>
+    <main>
+        <div class="form__wrapper">
+            <form action="/controllers/sendtodb.php" method="post" id="form_send">
+                <label for="date">Дата измерений</label>
+                <input type="date" name="date" id="date">
 
+                <label for="pressure1">Давление</label>
+                <input type="number" name="pressure1" id="">
+
+                <label for="pressure2">Давление</label>
+                <input type="number" name="pressure2" id="">
+
+                <label for="pulse">Пульс</label>
+                <input type="number" name="pulse" id="">
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/assets/js/app.js"></script>
 </body>
 
 </html>
