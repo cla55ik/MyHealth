@@ -34,7 +34,7 @@ class dbController
     {   
         // $dbconn = $this-;
         $data = $this->sanitazeData($array);
-        // $insert = pg_insert($this->dbconn, 'pressure', $data);
+        $insert = pg_insert($this->dbconn, 'pressure', $data);
         $insert = $data;
         return $insert;
     }

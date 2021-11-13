@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.input__group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.input__group {
+    margin: 10px 0;
+}
+
+.input__group input {
+    border-radius: 0;
+}
+
+.main__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form__wrapper {
+    width: 30%;
+}
+
+.measure__table td {
+    padding: 10px;
+}
