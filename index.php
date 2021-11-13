@@ -27,12 +27,13 @@ $data_arr = $db->getAllPressure();
 
 <body>
     <main class="main__wrapper">
+
         <div class="form__wrapper">
-            <form action="" method="post" id="form_send">
-                <div class="input__group">
+            <form action="" id="form_send">
+                <!-- <div class="input__group">
                     <label for="date">Дата измерений</label>
                     <input type="date" name="date" id="date">
-                </div>
+                </div> -->
 
                 <div class="input__group">
                     <label for="pressure1">Давление</label>
@@ -52,25 +53,38 @@ $data_arr = $db->getAllPressure();
 
                 <button class="btn btn__submit" type="submit">Отправить</button>
             </form>
+
+            <form action="" id="form__delete">
+                <div class="input__group">
+                    <label for="curr_id">ID записи</label>
+                    <input type="number" name="curr_id" id="">
+                </div>
+
+                <button class="btn btn__submit" type="submit">Удалить</button>
+            </form>
         </div>
 
         <div class="result__wrapper">
             <table class="measure__table">
                 <tr>
                     <td>id</td>
+                    <!-- <td>id</td> -->
                     <td>date</td>
+                    <td>time</td>
                     <td>pressure</td>
                     <td>pulse</td>
                 </tr>
-                <?php $index = 1;?>
+                <?php $index = 1; ?>
                 <?php foreach ($data_arr as $data) : ?>
                     <tr>
                         <td><?= $index ?></td>
+                        
                         <td><?= $data['date'] ?></td>
+                        <td><?= $data['time'] ?></td>
                         <td><?= $data['pressure1'] .  " / " .  $data['pressure2']; ?></td>
                         <td><?= $data['pulse'] ?></td>
                     </tr>
-                    <?php $index++;?>
+                    <?php $index++; ?>
                 <?php endforeach; ?>
 
 
