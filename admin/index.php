@@ -1,4 +1,11 @@
 <?php
+session_start();
+// echo $_SESSION["access_admin"];
+
+if (!isset($_SESSION["access_admin"])) {
+    header("Location: /login.php");
+}
+
 $page_title = 'My Health admin';
 require_once($_SERVER['DOCUMENT_ROOT'] . '/pages/header.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/controllers/dbController.php');

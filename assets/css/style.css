@@ -16,6 +16,7 @@
 
 header {
     background-color: #C1D0DF;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
 }
 
 .header__container {
@@ -155,7 +156,7 @@ form#form__delete {
 }
 
 .input__group label {
-    /* display: block; */
+    display: block;
     font-size: 18px;
     margin-bottom: 5px;
     color: #404040;
@@ -195,6 +196,28 @@ form#form__delete {
 
 
 /*end FORM */
+
+
+/* Login */
+
+.login__wrapper {
+    background-color: #F2F4F6;
+    min-height: 100vh;
+}
+
+.login__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form.form__login {
+    margin-top: 50px;
+    padding: 25px;
+    width: 30vw;
+    border-radius: 15px;
+    background-color: #fff;
+}
 
 @media screen and (max-width:575px) {
     h1 {
@@ -238,5 +261,8 @@ form#form__delete {
     }
     table.measure__table {
         width: 100%;
+    }
+    form.form__login {
+        width: 90vw;
     }
 }
